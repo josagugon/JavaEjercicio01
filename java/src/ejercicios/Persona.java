@@ -1,4 +1,5 @@
 /**
+ * Clase Persona del Ejercicio01
  * Haz una clase llamada Persona que siga las siguientes condiciones:
  * Sus atributos son:nombre,edad,DNI,sexo (H hombre, M mujer), peso y altura.
  * No queremos que se acceda directamente a ellos.

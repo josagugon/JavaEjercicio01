@@ -15,11 +15,16 @@ import java.io.*;
 public class Ejercicio04 {
 
 	/**
+	 * Constantes
+	 */
+	public final static String ARCHIVO04 = "E:\\git\\JavaEjercicio01\\java\\resources\\files\\alumnos.txt";
+
+	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+
 		File archivo = null;
 		FileReader archivoLector = null;
 		BufferedReader archivoDatos = null;
@@ -27,7 +32,7 @@ public class Ejercicio04 {
 		try {
 			// Apertura del fichero y creacion de BufferedReader para poder
 			// hacer una lectura comoda (disponer del metodo readLine()).
-			archivo = new File("E:\\git\\JavaEjercicio01\\java\\resources\\files\\alumnos.txt");
+			archivo = new File(ARCHIVO04);
 			archivoLector = new FileReader(archivo);
 			archivoDatos = new BufferedReader(archivoLector);
 

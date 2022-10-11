@@ -1,7 +1,7 @@
 /**
  * 
  */
-package ejercicio01;
+package ejercicios;
 
 import java.util.Scanner;
 
@@ -10,7 +10,7 @@ import java.util.Scanner;
  * @version 2022.10.10
  *
  */
-public class App01 {
+public class Ejercicio01 {
 
 	/**
 	 * @param args

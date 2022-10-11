@@ -32,7 +32,7 @@
  * Métodos set de cada parámetro, excepto de DNI.
  */
 
-package ejercicio01;
+package ejercicios;
 
 /**
  * @author agustin

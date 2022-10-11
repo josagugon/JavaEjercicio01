@@ -5,6 +5,7 @@ package ejercicio01;
 
 /**
  * @author agustin
+ * @version 2022.10.10
  *
  */
 public class App01 {

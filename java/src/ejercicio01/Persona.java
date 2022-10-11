@@ -1,12 +1,43 @@
 /**
- * 
+ * Haz una clase llamada Persona que siga las siguientes condiciones:
+ * Sus atributos son:nombre,edad,DNI,sexo (H hombre, M mujer), peso y altura.
+ * No queremos que se acceda directamente a ellos.
+ * Piensa que modificador de acceso es el más adecuado, también su tipo.
+ * Si quieres añadir algún atributo puedes hacerlo.
+ * Por defecto, todos los atributos menos el DNI serán valores por defecto
+ * según su tipo (0 números, cadena vacía para String, etc.).
+ * Sexo sera hombre por defecto, usa una constante para ello.
+ * Se implantaran varios constructores:
+ * Un constructor por defecto.
+ * Un constructor con el nombre, edad y sexo, el resto por defecto.
+ * Un constructor con todos los atributos como parámetro.
+ * Los métodos que se implementarán son:
+ * calcularIMC(): calculará si la persona está en su peso ideal
+ * (peso en kg/(altura^2 en m)),si esta fórmula devuelve un valor menor que 20,
+ * la función devuelve un -1, si devuelve un número entre 20 y 25 (incluidos),
+ * significa que está por debajo de su peso ideal la función devuelve un 0
+ * y si devuelve un valor mayor que 25 significa que tiene sobrepeso,
+ * la función devuelve un 1.
+ * Te recomiendo que uses constantes para devolver estos valores.
+ * esMayorDeEdad(): indica si es mayor de edad, devuelve un booleano.
+ * comprobarSexo(char sexo): comprueba que el sexo introducido es correcto.
+ * Si no es correcto, será H.
+ * No será visible al exterior.
+ * toString(): devuelve toda la información del objeto.
+ * generaDNI(): genera un número aleatorio de 8 cifras, genera a partir de este
+ * su número su letra correspondiente.
+ * Este método será invocado cuando se construya el objeto.
+ * Puedes dividir el método para que te sea más fácil.
+ * No será visible al exterior.
+ * Métodos set de cada parámetro, excepto de DNI.
  */
+
 package ejercicio01;
 
 /**
  * @author agustin
- *
  */
+
 public class Persona {
     /**
 	 * Constantes
@@ -22,6 +53,9 @@ public class Persona {
     // imc mayor que 25
     public final int SOBRE_PESO = 1;
 
+    public static String mensajeImc = "";
+    public static String mensajeMayor = "";
+
     /**
 	 * Atributos de la clase Persona
 	 */
@@ -36,14 +70,21 @@ public class Persona {
 	 * Calculará si la persona está en su peso ideal
 	 */
     public int calcularIMC() {
-    	double imc = peso / (altura * altura);
+    	double imc = 0;
     	int auxiliar = 0;
-    	if (imc < 20) {
+    	mensajeImc = "\tSIN DATOS";
+    	if (altura > 0) { 
+    		imc = peso / (altura * altura);
+    	}
+    	if (imc > 0 && imc < 20) {
     		auxiliar = BAJO_PESO;	
+    		mensajeImc = "\tBAJO PESO";
     	} else if (imc >= 20 && imc <=25){
     		auxiliar = PESO_IDEAL;	
+    		mensajeImc = "\tPESO IDEAL";
     	} else if (imc >= 20 && imc <=25){
     		auxiliar = SOBRE_PESO;
+    		mensajeImc = "\tSOBRE PESO";
     	}
     	return auxiliar;
     }
@@ -51,10 +92,12 @@ public class Persona {
     /**
 	 * Indica se es mayor de edad, devuelve un booleano
 	 */
-    public boolean esMayorDeEdad(boolean esMayor) {
-    	esMayor = false;
-        if (edad >= 18) {
+    public boolean esMayorDeEdad() {
+    	boolean esMayor = false;
+    	mensajeMayor = "\tES MENOR DE EDAD";
+    	if (edad >= 18) {
         	esMayor = true;
+        	mensajeMayor = "\tES MAYOR DE EDAD";
         }
         return esMayor;
     }
@@ -82,12 +125,12 @@ public class Persona {
         } else {
         	genero = "Mujer";
         }
-        //return "Nombre: " + nombre + "\nEdad: " + edad + "\nDNI: " + dni
-        //		+ "\nSexo: " + genero + "\nPeso: " + peso + "\nAltura: " + altura;
-        
-        return "\tNombre\t: " + nombre + "\n\tEdad\t: " + edad
-        		+ " años\n\tDNI\t: " + String.format("%,d", dni) + "\n\tSexo\t: " + genero
-        		+ "\n\tPeso\t: " + peso + " kilos\n\tAltura\t: " + altura + " metros";
+        return "\tNombre\t\t: " + nombre + "\n\tEdad\t\t: " + edad
+        		+ "\taños\n\tDNI\t\t: " + String.format("%,d", dni)
+        		+ "\n\tSexo\t\t: " + genero + "\n\tPeso\t\t: " + peso
+        		+ "\tkilos\n\tAltura\t\t: " + altura + "\tmetros"
+        		+ "\n\tIMC\t\t: " + calcularIMC()+ mensajeImc
+        		+ "\n\tMayor de edad\t: " + esMayorDeEdad()+ mensajeMayor;
     }
 
     /**

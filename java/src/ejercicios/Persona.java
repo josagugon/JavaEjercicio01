@@ -36,6 +36,7 @@ package ejercicios;
 
 /**
  * @author agustin
+ * @version 2022.10.10
  */
 
 public class Persona {
@@ -139,9 +140,7 @@ public class Persona {
     private void generarDNI() {
     	int menor = 1000000;
     	int mayor = 99999999;
-
     	int documento = ((int) Math.floor(Math.random() * (mayor - menor + 1) + menor));
-
         this.dni = documento;
     }
 

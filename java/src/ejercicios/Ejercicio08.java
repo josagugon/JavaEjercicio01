@@ -24,7 +24,6 @@ public class Ejercicio08 {
 	/**
 	 * @param args
 	 */
-	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		// Definición de las variables.
 		long evaluacion, desdeL, hastaL;

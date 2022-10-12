@@ -19,7 +19,6 @@ public class Ejercicio01 {
 		// TODO Auto-generated method stub
 
 		// Pide por teclado el nombre, la edad, sexo, peso y altura
-		@SuppressWarnings("resource")
 		Scanner teclado = new Scanner(System.in);
 
         System.out.print("Ingresa tu nombre: ");
@@ -36,6 +35,8 @@ public class Ejercicio01 {
         
         System.out.print("Ingresa tu altura en metros: ");
         double altura = teclado.nextDouble();
+        
+        teclado.close();
 
         /*
          * Crea 3 objetos de la clase anterior, el primer objeto obtendrá las

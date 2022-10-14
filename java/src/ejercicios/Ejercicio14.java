@@ -33,11 +33,14 @@ public class Ejercicio14 {
 
 		// Ingreso de dato
 		do {
+			Comunes.titulo("OPERACIONES ENTRE DOS NÚMEROS", "=");
+
 			terminar = 1;
 			numero1 = 0;
 			do {
 				System.out.print("Ingresar el primer número (entero): ");
 				ingreso = teclado.next();
+				teclado.nextLine();
 				// Verifica si es númerico
 				if (Comunes.esNumero(ingreso)) {
 					numero1 = Long.parseLong(ingreso);
@@ -50,6 +53,7 @@ public class Ejercicio14 {
 			do {
 				System.out.print("Ingresar el segundo número (entero): ");
 				ingreso = teclado.next();
+				teclado.nextLine();
 				// Verifica si es númerico
 				if (Comunes.esNumero(ingreso)) {
 					numero2 = Long.parseLong(ingreso);
@@ -57,6 +61,7 @@ public class Ejercicio14 {
 				}
 			} while (terminar != 0);
 
+			Comunes.linea("-", 40);
 			System.out.println("\t" + numero1 + " + " + numero2 + " = " + (numero1 + numero2));
 			System.out.println("\t" + numero1 + " - " + numero2 + " = " + (numero1 - numero2));
 			System.out.println("\t" + numero1 + " * " + numero2 + " = " + (numero1 * numero2));
@@ -67,11 +72,14 @@ public class Ejercicio14 {
 				System.out.println("\t" + numero1 + " / " + numero2 + " = " + (numero1 / numero2));
 				System.out.println("\t" + numero1 + " % " + numero2 + " = " + (numero1 % numero2));
 			}
+			Comunes.linea("-", 40);
 
 			System.out.print("Si desea terminar presione 0 : ");
 
 			terminar = 1;
 			ingreso = teclado.next();
+			teclado.nextLine();
+
 			// Verifica si es númerico
 			if (Comunes.esNumero(ingreso)) {
 				terminar = Long.parseLong(ingreso);
@@ -79,7 +87,7 @@ public class Ejercicio14 {
 		} while (terminar != 0);
 
 		// Final
-		System.out.println("FIN.");
+		Comunes.titulo("FIN.", "-");
 		teclado.close();
 	}
 

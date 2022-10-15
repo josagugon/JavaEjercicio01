@@ -1,11 +1,14 @@
 /**
- * Dado un String de entrada (frase, texto, etc) calcular la cantidad
- * de veces que aparece una letra dada.
+ * Crear un ArrayList y cargarlo con tus ciudades favoritas de Argentina,
+ * luego imprimir por pantalla el ranking.
  * Input (Entrada):
- * 		Hola Informatorio Java 2022.
- * 		A
+ *      Bariloche
+ *      Córdoba
+ *      Resistencia
  * Output (Salida):
- * 		4
+ *      #1 - Bariloche
+ *      #2 - Córdoba
+ *      #3 - Resistencia
  */
 package ejercicios;
 
@@ -32,7 +35,7 @@ public class Ejercicio22 {
 
         // Calcular cuanto se repite la letra.
         for (int i = 0; i < ciudades.size(); i++) {
-            System.out.println("\t#" + i + " - " + ciudades.get(i));
+            System.out.println("\t#" + (i+1) + " - " + ciudades.get(i));
         }
 
 		// Final

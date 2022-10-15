@@ -22,8 +22,7 @@ public class Ejercicio21 {
 	 */
 	public static void main(String[] args) {
 		// Definición de la variables
-		Scanner teclado = new Scanner(System.in);
-		String ingreso, texto, letra;
+		String texto, letra;
 		int cantidad, posicion;
 		long terminar;
 
@@ -35,7 +34,7 @@ public class Ejercicio21 {
 			texto = "";
 			do {
 				System.out.print("Ingresar el texto para analizar\t: ");
-				texto = teclado.nextLine();
+				texto = Comunes.teclado.nextLine();
 				texto = texto.toUpperCase();
 				// Verifica la longitud
 				if (null != texto && texto.length() > 0) {
@@ -47,7 +46,7 @@ public class Ejercicio21 {
 			letra = "";
 			do {
 				System.out.print("Ingresar una letra para contar\t: ");
-				letra = teclado.nextLine();
+				letra = Comunes.teclado.nextLine();
 				letra = letra.toUpperCase();
 				// Verifica la longitud
 				if (null != letra && letra.length() == 1) {
@@ -68,18 +67,11 @@ public class Ejercicio21 {
 			System.out.println("\tLa letra: " + letra + " en: " + texto + ", aparece: " + cantidad);
 			Comunes.linea("-", 50);
 
-			terminar = 1;
-			System.out.print("Si desea terminar presione 0 : ");
-			ingreso = teclado.next();
-			teclado.nextLine();
-			// Verifica si es númerico
-			if (Comunes.esNumero(ingreso)) {
-				terminar = Long.parseLong(ingreso);
-			}
+			terminar = Comunes.continua();
 		} while (terminar != 0);
 
 		// Final
 		Comunes.titulo("FIN.", "-");
-		teclado.close();
+		Comunes.teclado.close();
 	}
 }

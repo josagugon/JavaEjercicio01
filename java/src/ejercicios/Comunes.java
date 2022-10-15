@@ -3,13 +3,15 @@
  */
 package ejercicios;
 
-import java.io.IOException;
+import java.util.Scanner;
 
 /**
  * @author agustin
  * @version 12 oct. 2022
  */
 public class Comunes {
+
+	static Scanner teclado = new Scanner(System.in);
 
 	/**
 	 * Método que verifica si la cadena es númerica
@@ -42,6 +44,21 @@ public class Comunes {
 	public static void linea(String caracter, int largo) {
 		if (caracter != null && caracter.length() > 0) {
 			System.out.println("\t" + caracter.repeat(largo));
+		}
+	}
+
+	/**
+	 * Método para verificar si continua
+	 */
+	public static long continua() {
+		System.out.print("Si desea terminar presione 0 : ");
+		String ing = teclado.nextLine();
+
+		// Verifica si es númerico
+		if (Comunes.esNumero(ing)) {
+			return Long.parseLong(ing);
+		} else {
+			return 1;
 		}
 	}
 }

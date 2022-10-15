@@ -34,12 +34,12 @@ o	Por último, mostrar la información de cada objeto.
  
 EJERCICIOS PROPUESTOS EN EL CAMPUS:
 
-##Ejercicio 2:
+#Ejercicio 2:
 Crear una función que realice la suma de 2 números dados.
 Observaciones:
 Se deberán aplicar estilo de código (Java) y uso de funciones.
 
-##Ejercicio 3:
+#Ejercicio 3:
 Realizar una función que calcule el factorial de un número dado.
 Observaciones:
 Se deberán aplicar estilo de código (Java) y uso de funciones.
@@ -76,23 +76,23 @@ Rango	Clasificación
 Solución (if-else):
 Podemos ver el uso de la sintaxis condicional if-else, tal como lo vimos en Python. Pueden existir otras soluciones aceptables y que resuelvan el problema también (por ejemplo, en vez de preguntar por mayor podemos hacerlo por menor).También vemos el uso de operadores lógicos. Debajo se adjunta otros operadores de comparación y lógicos comunes para que puedas usarlos en otros ejercicios propuestos.
 Operador	Significado
-==	Igualdad
-!=	Distinto (No igual)
->	Mayor
->=	Mayor o Igual
-<	Menor
-<=	Menor o Igual
+	==	Igualdad
+	!=	Distinto (No igual)
+	>	Mayor
+	>=	Mayor o Igual
+	<	Menor
+	<=	Menor o Igual
 
 #Ejercicio 9:
 Realizar un programa que dado un número de entrada entre 1 a 7, nos devuelva el dia de la semana de la siguiente forma:
-Número	Dia
-1	Domingo
-2	Lunes
-3	Martes
-4	Miercoles
-5	Jueves
-6	Viernes
-7	Sabado 
+	Número	Dia
+	1	Domingo
+	2	Lunes
+	3	Martes
+	4	Miercoles
+	5	Jueves
+	6	Viernes
+	7	Sabado 
 Solución 1 (if-else):
 Podemos desarrollar un programa parecido al ejercicio anterior número 8. Intentalo!!
 Solución 2 (switch):
@@ -104,17 +104,17 @@ Prestemos atención a la sentencia break.
 #Ejercicio 10:
 Desarrollar un programa que dado un número entero ingresado, nos retorne los valores de ese número multiplicado por 1, 2, 3, … y 10.
 Ejemplo para el dato de entrada: 2
-Salida:
-2 * 1 = 2
-2 * 2 = 4
-2 * 3 = 6
-2 * 4 = 8
-2 * 5 = 10
-2 * 6 = 12
-2 * 7 = 14
-2 * 8 = 16
-2 * 9 = 18
-2 * 10 = 20
+	Salida:
+	2 * 1 = 2
+	2 * 2 = 4
+	2 * 3 = 6
+	2 * 4 = 8
+	2 * 5 = 10
+	2 * 6 = 12
+	2 * 7 = 14
+	2 * 8 = 16
+	2 * 9 = 18
+	2 * 10 = 20
 Solución (for):
 Aplicaremos una de las estructuras condicionales que usamos también en el módulo de Python que es el bucle for (o también llamado Para).
 La sintaxis de for para uso general es de la siguiente manera:

@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 /**
  * @author agustin
- * @version 12 oct. 2022
+ * @version 15 oct. 2022
  */
 public class Comunes {
 
